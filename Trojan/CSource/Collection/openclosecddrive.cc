@@ -1,0 +1,17 @@
+mciSendString(L"set CDAudio door open", NULL, 0, NULL);
+Sleep(2000);
+mciSendString(L"set CDAudio door closed", NULL, 0, NULL);
+Sleep(5000);
+mciSendString(L"set CDAudio door open", NULL, 0, NULL);
+Sleep(2000);
+mciSendString(L"set CDAudio door closed", NULL, 0, NULL);
+Sleep(5000);
+mciSendString(L"set CDAudio door open", NULL, 0, NULL);
+Sleep(2000);
+mciSendString(L"set CDAudio door closed", NULL, 0, NULL);
+Sleep(5000);
+mciSendString(L"set CDAudio door open", NULL, 0, NULL);
+Sleep(2000);
+mciSendString(L"set CDAudio door closed", NULL, 0, NULL);
+Sleep(5000);
+return 0;
