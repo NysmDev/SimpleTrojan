@@ -20,3 +20,10 @@ Now we start with creating our winrat.exe, the trojan itself. Source code in rep
 
 That's our trojan. But it doesn't have any commands. You can do anything you want now. Run an FTP server in the background (I recommend SlimFTPd), open websites or applications, play a sound, open your CD drive, etc.
 
+# SlimFTPd Server
+
+### Download :
+
+https://slimftpd.soft112.com/
+
+**Please Note that I am not responsible for malwares that enters your computer or if you use the Trojan Horse Virus as a threat.**
